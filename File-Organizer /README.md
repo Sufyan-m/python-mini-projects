@@ -1,42 +1,37 @@
 # 📂 File Organizer
 
-\<p align="center">   \<img src="[https://img.shields.io/badge/Python-3.14-blue?logo=python&logoColor=white](https://img.shields.io/badge/Python-3.14-blue?logo=python\&logoColor=white)" alt="Python 3.14"/>   \<img src="[https://img.shields.io/badge/Platform-Windows%20%7C%20Linux%20%7C%20macOS-lightgrey](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux%20%7C%20macOS-lightgrey)" alt="Platforms"/>   \<img src="[https://img.shields.io/badge/Dependencies-None-success](https://img.shields.io/badge/Dependencies-None-success)" alt="No dependencies"/>   \<img src="[https://img.shields.io/badge/Project-Beginner-orange](https://img.shields.io/badge/Project-Beginner-orange)" alt="Beginner project"/> \</p>
+<p align="center">
+  <img src="https://shields.io" alt="Python 3.8+"/>
+  <img src="https://shields.io" alt="Platforms"/>
+  <img src="https://shields.io" alt="No dependencies"/>
+  <img src="https://shields.io" alt="Beginner project"/>
+</p>
 
-A simple Python automation project that organizes files into folders based on their extensions.
+A lightweight Python automation script that automatically sorts messy files into clean folders based on their file extensions.
 
-Tired of a Downloads folder full of random files? This little script helps bring some order to the chaos. 💀
-
-## 🎬 See It in Action
-
-\<!-- Add your recorded demonstration GIF here -->
-
-\<!-- Save it as assets/demo.gif inside this project -->
-
-
-
-*No more manually sorting every file. Let Python handle the boring stuff.*
+Tired of a `Downloads` folder looking like a digital junkyard? Run this script once and watch it clean up the mess in seconds. 💀
 
 ## ✨ Features
 
-- Detects file extensions.
-- Automatically creates folders.
-- Moves files into matching folders.
-- Uses Python's built-in modules.
-- No external libraries required.
+- Automatically detects file extensions (`.pdf`, `.jpg`, `.mp4`, etc.).
+- Creates separate folders for each file type if they don't exist.
+- Safely moves files into their matching folders.
+- Built using 100% Python standard libraries (no `pip install` needed).
 
 ## 🧠 How It Works
 
 ```mermaid
 flowchart TD
-    A([Start]) --> B[Read Target Directory]
-    B --> C[Get File Extensions]
+    A([Start]) --> B[Scan Target Directory]
+    B --> C[Extract File Extensions]
     C --> D[Create Matching Folders]
-    D --> E[Move Files]
-    E --> F([Organization Complete])
+    D --> E[Move Files to Folders]
+    E --> F([Cleanup Complete])
 ```
 
-### Before
+### Folder Structure (Before vs. After)
 
+**Before:**
 ```text
 Downloads/
 ├── anime.jpg
@@ -46,8 +41,7 @@ Downloads/
 └── notes.txt
 ```
 
-### After
-
+**After:**
 ```text
 Downloads/
 ├── jpg/
@@ -62,80 +56,69 @@ Downloads/
     └── notes.txt
 ```
 
-## 🛠️ Tech Stack
+## 🛠️ Built With
 
-- Python 3.14
-- `os`
-- `shutil`
+- **Python 3.8+**
+- `os` — for reading directories and handling file paths
+- `shutil` — for moving files across folders
 
 ## 🚀 Getting Started
 
-### Requirements
+### Prerequisites
 
-- Python 3.14
-- Windows, Linux, or macOS
-- A desktop PC or laptop
-- A directory containing files to organize
+- Python 3.8 or higher installed on your PC
+- Windows, Linux, or macOS *(Mobile phones not supported ☠️)*
 
-**Mobile phones? Not invited.** ☠️
+### Setup & Usage
 
-### Installation
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Sufyan-m/python-mini-projects.git
+   ```
 
-Clone the repository:
+2. **Navigate to the project folder:**
+   ```bash
+   cd python-mini-projects/File-Organizer
+   ```
 
-```bash
-git clone https://github.com/Sufyan-m/Python-Mini-Projects.git
-```
+3. **Set your target folder path** inside `main.py`:
+   ```python
+   folder_path = r"C:\Users\YourName\Downloads"
+   ```
 
-Navigate to the project:
+4. **Run the script:**
+   ```bash
+   python main.py
+   ```
 
-```bash
-cd Python-Mini-Projects/File-Organizer
-```
+> **⚠️ Pro Tip:** Always test the script on a sample/dummy folder first before running it on your main `Downloads` or `Desktop` folder!
 
-Open `main.py` and update the folder path:
+<details>
+<summary>📚 What I Learned</summary>
 
-```python
-folder_path = r"C:\Users\YourName\Downloads"
-```
+- Navigating directories and listing files using `os.listdir()`.
+- Splitting filenames and extensions cleanly with `os.path.splitext()`.
+- Creating folders safely without errors using `os.makedirs(..., exist_ok=True)`.
+- Automating file transfers with `shutil.move()`.
 
-Run:
+</details>
 
-```bash
-python main.py
-```
+<details>
+<summary>🔮 Future Improvements</summary>
 
-**Note:** Test with a sample directory first. The program moves files, so back up important data before running it.
+- Group similar extensions together (e.g., `.jpg` and `.png` into an `Images` folder).
+- Handle duplicate filenames without overwriting existing files.
+- Add an "Undo" feature or dry-run preview mode.
+- Build a simple GUI or interactive CLI folder picker.
 
-\<details> \<summary>📚 What I Learned\</summary>
-
-- Python file handling with `os`.
-- Moving files using `shutil`.
-- Extracting extensions with `os.path.splitext()`.
-- Creating directories with `os.makedirs()`.
-- Using loops and conditions for automation.
-
-\</details>
-
-\<details> \<summary>🔮 Future Improvements\</summary>
-
-- Better error handling.
-- Duplicate filename handling.
-- Preview before moving files.
-- Interactive folder selection.
-
-\</details>
+</details>
 
 ## 👨‍💻 Author
 
-**Sufyan-m**
+**Sufyan** — ICS Student | Python Learner | Gamer | Anime Fan
 
-Python learner | Automation enthusiast | Gamer | Anime fan
-
-GitHub: [@Sufyan-m](https://github.com/Sufyan-m)
+- GitHub: [@Sufyan-m](https://github.com/Sufyan-m)
 
 ---
 
-Part of **Python Mini Projects**, a collection of small projects built while learning Python.
-
-*One project at a time. One bug at a time.*
+*Part of my **[python-mini-projects](https://github.com/Sufyan-m/python-mini-projects)** repository — building one project (and fixing one bug) at a time.*
