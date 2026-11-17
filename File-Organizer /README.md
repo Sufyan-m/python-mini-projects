@@ -1,11 +1,11 @@
 # 📂 File Organizer
 
-<p align="center">
-  <img src="https://shields.io" alt="Python 3.8+"/>
-  <img src="https://shields.io" alt="Platforms"/>
-  <img src="https://shields.io" alt="No dependencies"/>
-  <img src="https://shields.io" alt="Beginner project"/>
-</p>
+# 📂 File Organizer
+
+![Python 3.8+](https://shields.io)
+![Platforms](https://shields.io)
+![Dependencies](https://shields.io)
+![Level](https://shields.io)
 
 A lightweight Python automation script that automatically sorts messy files into clean folders based on their file extensions.
 
