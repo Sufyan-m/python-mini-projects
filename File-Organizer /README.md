@@ -1,9 +1,6 @@
 # 📂 File Organizer
 
-![Python 3.8+](https://badgen.net)
-![Platforms](https://badgen.net)
-![Dependencies](https://badgen.net)
-![Level](https://badgen.net)
+`🐍 Python 3.8+` • `💻 Windows | Linux | macOS` • `📦 Dependencies: None` • `🎯 Level: Beginner`
 
 
 A lightweight Python automation script that automatically sorts messy files into clean folders based on their file extensions.
